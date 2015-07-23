@@ -19,7 +19,7 @@ curl -L --silent -o pngquant/bin/pngquant $PNGQUANT_DOWNLOAD_URL
 chmod +x pngquant/bin/pngquant
 
 echo "exporting PATH" | indent
-export PATH="$PATH:$PNGQUANT_BIN_PATH"
+export PATH=$PATH:$PNGQUANT_BIN_PATH
 PROFILE_PATH="$BUILD_DIR/.profile.d/pngquant.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:$PNGQUANT_BIN_PATH"' >> $PROFILE_PATH
+echo "export PATH=$PATH:$PNGQUANT_BIN_PATH" >> $PROFILE_PATH
